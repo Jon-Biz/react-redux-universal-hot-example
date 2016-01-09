@@ -23,15 +23,15 @@ This is a starter boilerplate app I've put together using the following technolo
 * [Webpack Dev Middleware](http://webpack.github.io/docs/webpack-dev-middleware.html)
 * [Webpack Hot Middleware](https://github.com/glenjamin/webpack-hot-middleware)
 * [Redux](https://github.com/rackt/redux)'s futuristic [Flux](https://facebook.github.io/react/blog/2014/05/06/flux.html) implementation
-* [Redux Dev Tools](https://github.com/gaearon/redux-devtools) for next generation DX (developer experience). Watch [Dan Abramov's talk](https://www.youtube.com/watch?v=xsSnOQynTHs).
-* [Redux Router](https://github.com/rackt/redux-router) Keep your router state in your Redux store
+* [Redux Dev Tools](https://github.com/rackt/redux-devtools) for next generation DX (developer experience). Watch [Dan Abramov's talk](https://www.youtube.com/watch?v=xsSnOQynTHs).
+* [Redux Router](https://github.com/acdlite/redux-router) Keep your router state in your Redux store
 * [ESLint](http://eslint.org) to maintain a consistent code style
 * [redux-form](https://github.com/erikras/redux-form) to manage form state in Redux
 * [lru-memoize](https://github.com/erikras/lru-memoize) to speed up form validation
 * [multireducer](https://github.com/erikras/multireducer) to combine single reducers into one key-based reducer
 * [style-loader](https://github.com/webpack/style-loader), [sass-loader](https://github.com/jtangelder/sass-loader) and [less-loader](https://github.com/webpack/less-loader) to allow import of stylesheets in plain css, sass and less,
 * [bootstrap-sass-loader](https://github.com/shakacode/bootstrap-sass-loader) and [font-awesome-webpack](https://github.com/gowravshekar/font-awesome-webpack) to customize Bootstrap and FontAwesome
-* [react-document-meta](https://github.com/kodyl/react-document-meta) to manage title and meta tag information on both server and client
+* [react-helmet](https://github.com/nfl/react-helmet) to manage title and meta tag information on both server and client
 * [webpack-isomorphic-tools](https://github.com/halt-hammerzeit/webpack-isomorphic-tools) to allow require() work for statics both on client and server
 * [mocha](https://mochajs.org/) to allow writing unit tests for the project.
 
@@ -53,13 +53,17 @@ The first time it may take a little while to generate the first `webpack-assets.
 
 ### Using Redux DevTools
 
-In development, Redux Devtools are enabled by default. You can toggle visibility and move the dock around using the following keyboard shortcuts:
+[Redux Devtools](https://github.com/gaearon/redux-devtools) are enabled by default in development.
 
-- <kbd>Ctrl+H</kbd> Toggle DevTools Dock
-- <kbd>Ctrl+Q</kbd> Move Dock Position
-- see [redux-devtools-dock-monitor](https://github.com/gaearon/redux-devtools-dock-monitor) for more detail information.
+- <kbd>H</kbd> Toggle DevTools Dock
+- <kbd>Q</kbd> Move DevTools Dock Position
+- see [redux-devtools-dock-monitor](https://github.com/gaearon/redux-devtools-dock-monitor) for more detailed information.
 
-If you have the [Redux DevTools chrome extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) installed it will automatically be used on the client-side instead.
+If you have the 
+[Redux DevTools chrome extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) installed it will automatically be used on the client-side instead.
+
+If you want to disable the dev tools during development, set `__DEVTOOLS__` to `false` in `/webpack/dev.config.js`.  
+DevTools are not enabled during production.
 
 ## Building and Running Production Server
 
@@ -72,11 +76,12 @@ npm run start
 
 A demonstration of this app can be seen [running on heroku](https://react-redux.herokuapp.com), which is a deployment of the [heroku branch](https://github.com/erikras/react-redux-universal-hot-example/tree/heroku).
 
-## Tutorials
+## Documentation
 
-If you are the kind of person that learns best by following along a tutorial, I can recommend the following.
-
+* [Exploring the Demo App](docs/ExploringTheDemoApp/ExploringTheDemoApp.md) is a guide that can be used before you install the kit.
 * [React Tutorial - Converting Reflux to Redux](http://engineering.wework.com/process/2015/10/01/react-reflux-to-redux/), by Matt Star
+   If you are the kind of person that learns best by following along a tutorial, I can recommend Matt Star's overview and examples.
+
 
 ## Explanation
 
@@ -171,9 +176,6 @@ The first deploy might take a while, but after that your `node_modules` dir shou
 
 This project moves fast and has an active community, so if you have a question that is not answered below please visit our [Discord channel](https://discord.gg/0ZcbPKXt5bZZb1Ko) or file an issue.
 
-#### How do I disable the dev tools?
-
-They will only show in development, but if you want to disable them even there, set `__DEVTOOLS__` to `false` in `/webpack/dev.config.js`.
 
 ## Roadmap 
 
