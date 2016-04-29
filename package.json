@@ -77,7 +77,9 @@
       "command": "node webpack/webpack-dev-server.js",
       "env": {
         "UV_THREADPOOL_SIZE": 100,
-        "NODE_PATH": "./src"
+        "NODE_PATH": "./src",
+        "PORT": 3000,
+        "APIPORT": 3030
       }
     },
     "build": {
@@ -123,7 +125,7 @@
     "react-redux": "^4.0.0",
     "react-router": "2.0.0",
     "react-router-bootstrap": "^0.20.1",
-    "react-router-redux": "^3.0.0",
+    "react-router-redux": "^4.0.0",
     "redux": "^3.0.4",
     "redux-async-connect": "^1.0.0-rc2",
     "redux-form": "^3.0.12",
@@ -142,7 +144,7 @@
     "babel-eslint": "^5.0.0-beta6",
     "babel-plugin-react-transform": "^2.0.0",
     "babel-plugin-typecheck": "^3.6.0",
-    "better-npm-run": "^0.0.4",
+    "better-npm-run": "0.0.8",
     "bootstrap-sass": "^3.3.5",
     "bootstrap-sass-loader": "^1.0.9",
     "chai": "^3.3.0",
