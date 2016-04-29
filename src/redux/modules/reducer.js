@@ -4,5 +4,6 @@ import {reducer as reduxAsyncConnect} from 'redux-async-connect';
 
 /* Remove and add actions here. */
 export default combineReducers({
-  router: routerStateReducer,
+  routing: routerReducer,
+  reduxAsyncConnect,
 });
